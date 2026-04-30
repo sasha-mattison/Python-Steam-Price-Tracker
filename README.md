@@ -35,11 +35,13 @@ A Python-based Steam wishlist price tracker that scrapes game data from Steam st
 Python-Steam-Price-Tracker/
 │
 ├── main.py
-├── get_wishlist_attributes.py
-├── send_email.py
-├── wishlist.txt
-├── .pswd.txt # (ignored by git)
+├── scraper.py
+├── emailer.py
+│
+├── .env
+├── .gitignore
 └── README.md
+
 
 
 ---
