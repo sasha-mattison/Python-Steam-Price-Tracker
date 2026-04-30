@@ -7,7 +7,7 @@ A Python-based Steam wishlist price tracker that scrapes game data from Steam st
 ## 🚀 Features
 
 - 🔍 Scrapes Steam store pages using `requests` + `BeautifulSoup`
-- 🎮 Loads wishlist URLs from a local file (`wishlist.txt`)
+- 🎮 Loads wishlist URLs from '.env'
 - 💰 Extracts:
   - Game name
   - Current price
