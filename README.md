@@ -83,4 +83,4 @@ You must:
 
 Run setup.py
 
-this will create a .env file in the git directory where you can fill in the specified fields.
+This will create a .env file in the git directory where you can fill in the specified fields.
