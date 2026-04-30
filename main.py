@@ -12,6 +12,8 @@ def main():
 
     for game in discounted_games:
         send_email.send_email(game["name"] + "is on sale", get_formatted_game_info(game))
+    print("Exited Succesfully")
+
 
 def get_formatted_game_info(game):
     final = ""
@@ -19,8 +21,5 @@ def get_formatted_game_info(game):
         final = final + (f"{key}: {value}\n")
         
     return final.replace("_", " ")
-
-print("Exited Succesfully")
-
 
 main()
