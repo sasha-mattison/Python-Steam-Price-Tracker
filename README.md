@@ -32,15 +32,15 @@ A Python-based Steam wishlist price tracker that scrapes game data from Steam st
 
 ## 📂 Project Structure
 
-Python-Steam-Price-Tracker/
-│
-├── main.py
-├── scraper.py
-├── emailer.py
-│
-├── .env
-├── .gitignore
-└── README.md
+Python-Steam-Price-Tracker/<br />
+│<br />
+├── main.py<br />
+├── scraper.py<br />
+├── emailer.py<br />
+│<br />
+├── .env<br />
+├── .gitignore<br />
+└── README.md<br />
 
 
 
