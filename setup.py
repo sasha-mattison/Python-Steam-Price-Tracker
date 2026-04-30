@@ -4,7 +4,7 @@ env_path = Path(".env")
 
 if not env_path.exists():
     env_path.write_text(
-        "APP_PASSWORD=\nEMAIL=\n"
+        "APP_PASSWORD=\nSTEAM_WISHLIST\nEMAIL=\n"
     )
     print(".env file created")
 else:

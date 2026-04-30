@@ -6,12 +6,13 @@ import os
 load_dotenv()
 
 app_password = os.getenv("APP_PASSWORD")
+email = os.getenv("EMAIL")
 
 def send_email(subject, content):
     msg = EmailMessage()
     msg["Subject"] = subject
-    msg["From"] = "Steam Tracker <sashamattison2010@gmail.com>"
-    msg["To"] = "sashamattison2010@gmail.com"
+    msg["From"] = "Steam Tracker <" + email +">"
+    msg["To"] = email
 
     msg.set_content(content)
 
@@ -20,5 +21,5 @@ def send_email(subject, content):
         smtp.starttls()
         smtp.ehlo()
 
-        smtp.login("sashamattison2010@gmail.com", app_password)
+        smtp.login(email, app_password)
         smtp.send_message(msg)
