@@ -1,8 +1,8 @@
-import get_wishlist_attributes
-import send_email
+import scraper
+import emailer
 
 def main():
-    game_data = get_wishlist_attributes.get_wishlist_attributes()
+    game_data = scraper.get_wishlist_attributes()
     discounted_games = []
 
     for game in game_data:
@@ -11,7 +11,7 @@ def main():
                 discounted_games.append(game)
 
     for game in discounted_games:
-        send_email.send_email(game["name"] + "is on sale", get_formatted_game_info(game))
+        emailer.send_email(game["name"] + "is on sale", get_formatted_game_info(game))
     print("Exited Succesfully")
 
 
