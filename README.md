@@ -48,7 +48,7 @@ Python-Steam-Price-Tracker/<br />
 
 ## ⚙️ How It Works
 
-1. Steam game URLs are loaded from `wishlist.txt`
+1. Steam game URLs are loaded from `.env`
 2. Each URL is requested using `requests`
 3. HTML is parsed with BeautifulSoup
 4. Game data is extracted:
