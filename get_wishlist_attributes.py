@@ -1,5 +1,9 @@
 import requests
 from bs4 import BeautifulSoup
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 html_documents = []
 soups = []
@@ -8,8 +12,7 @@ game_data = []
 urls = []
 
 def load_wishlist():
-    wishlist = open(".wishlist")
-    contents = wishlist.read()
+    contents = os.getenv("STEAM_WISHLIST")
     urls.extend(contents.split())
 
 def get_html_docs():

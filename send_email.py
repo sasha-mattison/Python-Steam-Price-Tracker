@@ -1,11 +1,11 @@
 import smtplib
 from email.message import EmailMessage
+from dotenv import load_dotenv
+import os
 
-def read_password():
-    with open(".pswd") as password:
-        return password.read().strip()
+load_dotenv()
 
-app_password = read_password()
+app_password = os.getenv("APP_PASSWORD")
 
 def send_email(subject, content):
     msg = EmailMessage()

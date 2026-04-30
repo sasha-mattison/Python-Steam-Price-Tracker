@@ -20,5 +20,7 @@ def get_formatted_game_info(game):
         
     return final.replace("_", " ")
 
+print("Exited Succesfully")
+
 
 main()
