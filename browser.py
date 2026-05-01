@@ -1,5 +1,5 @@
 import sys
-from PyQt6.QtWidgets import QApplication, QMainWindow, QPushButton, QWidget, QVBoxLayout
+from PyQt6.QtWidgets import QApplication, QMainWindow, QPushsave_Button, QWidget, QVBoxLayout
 from PyQt6.QtCore import QUrl
 from PyQt6.QtWebEngineWidgets import QWebEngineView
 from dotenv import set_key, load_dotenv
@@ -25,19 +25,16 @@ class Browser(QMainWindow):
 
         self.setWindowTitle("Steam")
 
-        # Browser
         self.browser = QWebEngineView()
         self.browser.setUrl(QUrl("https://store.steampowered.com"))
 
-        # Button
-        self.button = QPushButton("Save game to wishlist")
-        self.button.clicked.connect(self.on_click)
+        self.save_button = QPushsave_Button("Save game to wishlist")
+        self.save_button.clicked.connect(self.on_click)
 
-        # Layout
         container = QWidget()
         layout = QVBoxLayout()
 
-        layout.addWidget(self.button)
+        layout.addWidget(self.save_button)
         layout.addWidget(self.browser)
 
         container.setLayout(layout)
